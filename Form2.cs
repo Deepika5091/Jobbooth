@@ -39,9 +39,7 @@ namespace JobBooth
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form4 f4 = new Form4();
-            f4.Show();
-            this.Hide();
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -65,13 +63,14 @@ namespace JobBooth
             string pass = textBox2.Text;
 
 
-          /**************************************************/
-                //SetValueForText1 = textBox1.Text;
-               // SetValueForText2 = textBox2.Text;
+            /**************************************************/
+            //SetValueForText1 = textBox1.Text;
+            // SetValueForText2 = textBox2.Text;
 
-               //Form9 frm9 = new Form9();
-                //frm9.Show();
+            //Form9 frm9 = new Form9();
+            //frm9.Show();
             /*************************************************/
+            
 
 
             MySqlCommand cmd = new MySqlCommand("select email,password from jpersonaldetails where email='" + textBox1.Text + "'and password='" + textBox2.Text + "'", conn1);
@@ -80,10 +79,12 @@ namespace JobBooth
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                
-                  SetValueForText1 = textBox1.Text;
+               
+                SetValueForText1 = textBox1.Text;
                 // SetValueForText2 = textBox2.Text;
 
+                textBox1.Text = "";
+                textBox2.Text = "";
                 Form9 frm9 = new Form9();
                 frm9.Show();
             }
@@ -98,7 +99,7 @@ namespace JobBooth
                 // MessageBox.Show("Invalid Login please check username and password");
                 //Form9 f9 = new Form9();
                 //f9.Show();
-                this.Hide();
+                //this.Hide();
             }
             conn1.Close();
         }

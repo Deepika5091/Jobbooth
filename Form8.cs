@@ -26,6 +26,7 @@ namespace JobBooth
 
         private void Form8_Load(object sender, EventArgs e)
         {
+            
             string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
             MySqlConnection conn1 = new MySqlConnection(connectionString);
             conn1.Open();
@@ -72,27 +73,27 @@ namespace JobBooth
             try
             {
                 string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
-                 MySqlConnection conn2 = new MySqlConnection(connectionString);
+                MySqlConnection conn2 = new MySqlConnection(connectionString);
                 conn2.Open();
                 string a = Form3.SetValueForText1;
                 String Query2 = "select cid from cdetails where cname='" + a + "';";
                 MySqlCommand cmd1 = new MySqlCommand(Query2, conn2);
-                 string s = Convert.ToString(cmd1.ExecuteScalar());
-                 string Query = "select * from vdetails where cid='" + s + "';";
+                string s = Convert.ToString(cmd1.ExecuteScalar());
+                string Query = "select * from vdetails where cid='" + s + "';";
                 MySqlCommand cmd2 = new MySqlCommand(Query, conn2);
                 //MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                 //MySqlCommand MyCommand2 = new MySqlCommand(Query, conn2);
+                //MySqlCommand MyCommand2 = new MySqlCommand(Query, conn2);
                 // MyConn2.Open();  
                 //For offline connection we will use  MySqlDataAdapter class.  
                 MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
                 MyAdapter.SelectCommand = cmd2;
-               // MyAdapter.SelectCommand = cmd2;
+                // MyAdapter.SelectCommand = cmd2;
                 DataTable dTable = new DataTable();
-                 MyAdapter.Fill(dTable);
-                 dataGridView1.DataSource = dTable;
+                MyAdapter.Fill(dTable);
+                dataGridView1.DataSource = dTable;
 
 
-                
+
 
 
             }
@@ -111,7 +112,43 @@ namespace JobBooth
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
+            MySqlConnection conn1 = new MySqlConnection(connectionString);
+            conn1.Open();
+            try
+            {
+                
+                string a = Form3.SetValueForText1;
+                string vid = textBox1.Text;               
+               // String Query4 = "select cid from cdetails where cname='" + a + "';";
+                //MySqlCommand cmd1 = new MySqlCommand(Query4, conn1);
+              //  string s = Convert.ToString(cmd1.ExecuteScalar());
+                string Query5 = "select qual from vdetails where vid='" + vid + "';";
+                MySqlCommand cmd2 = new MySqlCommand(Query5, conn1);
+                string l = Convert.ToString(cmd2.ExecuteScalar());
+                MessageBox.Show(l);
+
+               
+                string Query6 = "select firstname,middlename,lastname,address,dob,gender,phone,email,hobbies,exp,Xschool,Xpassout,Xpercent,XIIschool,XIIpassout,XIIpercent,ugcollege,ugpassout,ugpercent,ugmajor,pgcollege,pgpassout,pgpercent,pgmajor from jpersonaldetails d,jeducational e,expdet f where d.jid=e.jid and d.jid=f.jid and ugmajor like '%" + l + '%' + "';";
+                MySqlCommand cmd3 = new MySqlCommand(Query6, conn1);
+                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MyAdapter.SelectCommand = cmd3;
+                // MyAdapter.SelectCommand = cmd2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                dataGridView1.DataSource = dTable;
+
+            }
+            catch (Exception cc)
+            {
+                MessageBox.Show(cc.ToString());
+            }
+        }
     }
-    }
+}
 
 

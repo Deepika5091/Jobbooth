@@ -33,9 +33,7 @@ namespace JobBooth
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form5 f5 = new Form5();
-            f5.Show();
-            this.Hide();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

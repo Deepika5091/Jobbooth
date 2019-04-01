@@ -54,7 +54,7 @@ namespace JobBooth
                 label8.Text = Convert.ToString(MyCommand2.ExecuteScalar());
                 label9.Text = Convert.ToString(MyCommand3.ExecuteScalar());
 
-                String Query4 = "select jid from jpersonaldetails where email='" + a + "';";
+                //String Query4 = "select jid from jpersonaldetails where email='" + a + "';";
                 MySqlCommand cmd1 = new MySqlCommand(Query2, conn1);
                 string s = Convert.ToString(cmd1.ExecuteScalar());
                 string Query5 = "select ugmajor from jeducational where jid='" + s + "';";
@@ -64,7 +64,7 @@ namespace JobBooth
                 //MySqlCommand MyCommand2 = new MySqlCommand(Query, conn2);
                 // MyConn2.Open();  
                 //For offline connection we will use  MySqlDataAdapter class.
-                string Query6 = "select cname,cdetails,phone,url,refmail,cadd,vpost,jdesp,minexp,qual,skill,sal from cdetails c, vdetails v where c.cid=v.cid and qual like '%"+ l + '%'+"';";
+                string Query6 = "select cname,cdetails,cadd,vpost,jdesp,minexp,qual,skill,sal,phone,url,refmail from cdetails c, vdetails v where c.cid=v.cid and qual like '%" + l + '%'+"';";
                 MySqlCommand cmd3 = new MySqlCommand(Query6, conn1);
                 MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
                 MyAdapter.SelectCommand = cmd3;

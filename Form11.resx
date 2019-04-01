@@ -117,32 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAlBJREFUaEPt2U+ITXEYxvErDaWMnawsKMxikmwoCXvNhp2GjanZ2Igs2ImkbBQr
-        FqSwGJSVhSahZMYCSwsLJZSIKITvo9R0evv9O/c95yzOU5/N1O+95+me+Z0/d9CnT5+iLMIBzOEH/rTs
-        E25gA5KjEpdgDWzbV+xCUvRNWEO64j1GEc08rAFdchDB6LTqwv9EzEUEswLWwq65hmA8inzB98rf6mqk
-        yGucwEZo3v+sxUn8grUuh3uRsxhBKHtwC3UKuRaJDq9kC3Shs2bFuBX5hpXIzTSseTFuRe6iJEuhzcCa
-        GeJW5BhK8wjWzBC3ItErbSD6Nq2ZIW5FdH9Wmk4VOYrSPIU1M8StyHmUZDE+w5oZ4lbkCUqyGda8GLci
-        ekYoSeeuI0dQkuXQxdSaGeJW5DBK8wHWzBC3IroJLMkYrHkxbkV+I/fqvhoPYc2LcSsiP7EMqTkOa04K
-        1yIyidQ8hjUjhXuRF4g9WClbYa1P5V5EziEUfcZLWGtTNVLkOUIZh7UuRyNF9IIvlHWw1uVopMh9hKJt
-        11qXo5EieuUTirbod7DWpnIvcgVLEMs2vIE1I4VbkQfYjZzos06h9XstvQa9jE2oE71J2Y+cJ8WhFNGP
-        LaexCsPODtyD9bkL1S4yizXwzj58hHUMEi2iHcVaKNehZ+ymot8L9eRpHYs2lWjeorrwFXLubIeVCVSP
-        RWJb/L9cRXXhFNrKM1SPR9t3NOtRfUt+CHtbcgcLj2UGydmOOhcsL7eRfYrrDYdOqQu42SLtUGewE336
-        9CnKYPAXuCTJEuYP1g4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAS9JREFUSEvdld1NwzAYRQMIZoA9EGIJQPwUqeoSwBMb8LMGpYsUVqAgOgWq4A04
-        VzjIwtexyRsc6Uix+107jR2n+fes4TFO8BEXQV2rT7+ppheH+IwfBVVzgNWs4DW6wbq8QmWL9Bm8VZN0
-        or/qgq94guvBM3xDV7uHFi3WHF3oFJdwhMNwrUlcrdZkFRO0I1xA6q41eNvWJBtR+6dHmKBt54qlOMe2
-        faEOiGtix5jwhK54E3NsoctorIQXdMUlXEZjJdRMcI93X5ffuIydIPeIYqbBGJfRUZJwi664hMvcYEJu
-        m2ohc2yjy9ht2vWi/cbsiyb20YVqfccd7EQHlgvXeIlFdOSq0A2QU3euzDJWs4u1H5ziY8mhhR+gzpYZ
-        6nOpl+gh9Gm39P5k/gWa5hMnlP2QhFkpAQAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

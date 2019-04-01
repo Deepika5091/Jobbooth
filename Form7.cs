@@ -43,28 +43,33 @@ namespace JobBooth
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            jobseeker();
+        }
+            public void jobseeker()
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
-                MySqlConnection conn1 = new MySqlConnection(connectionString); conn1.Open();
-                string Query = "select * from jpersonaldetails d,jeducational e,expdet f where d.jid=e.jid and d.jid=f.jid ;";
 
-             
-                //MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, conn1);
-                //  MyConn2.Open();  
-                //For offline connection we weill use  MySqlDataAdapter class.  
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
-                MyAdapter.SelectCommand = MyCommand2;
-                DataTable dTable = new DataTable();
-                MyAdapter.Fill(dTable);
-                dataGridView1.DataSource = dTable;
-            }
-            catch (Exception cc)
-            {
-                MessageBox.Show(cc.ToString());
-            }
+                try
+                {
+                    string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
+                    MySqlConnection conn1 = new MySqlConnection(connectionString); conn1.Open();
+                    string Query = "select * from jpersonaldetails d,jeducational e,expdet f where d.jid=e.jid and d.jid=f.jid ;";
 
+
+                    //MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                    MySqlCommand MyCommand2 = new MySqlCommand(Query, conn1);
+                    //  MyConn2.Open();  
+                    //For offline connection we weill use  MySqlDataAdapter class.  
+                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                    MyAdapter.SelectCommand = MyCommand2;
+                    DataTable dTable = new DataTable();
+                    MyAdapter.Fill(dTable);
+                    dataGridView1.DataSource = dTable;
+                }
+                catch (Exception cc)
+                {
+                    MessageBox.Show(cc.ToString());
+                }
+          
         }
 
         private void Form7_Load(object sender, EventArgs e)
@@ -90,11 +95,22 @@ namespace JobBooth
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
                 dataGridView1.DataSource = dTable;
+                DataGridViewLinkColumn view = new DataGridViewLinkColumn();
+                dataGridView1.Columns.Add(view);
+                view.HeaderText = "View";
+                view.Text = "view";
+                view.UseColumnTextForLinkValue = true;
+
             }
             catch (Exception cc)
             {
                 MessageBox.Show(cc.ToString());
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

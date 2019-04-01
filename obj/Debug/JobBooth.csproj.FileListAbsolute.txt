@@ -44,3 +44,4 @@ C:\Users\khsci5mca16111\Desktop\JobBooth\obj\Debug\JobBooth.Form7.resources
 C:\Users\khsci5mca16111\Desktop\JobBooth\obj\Debug\JobBooth.Form8.resources
 C:\Users\khsci5mca16111\Desktop\JobBooth\obj\Debug\JobBooth.Form9.resources
 C:\Users\khsci5mca16111\Desktop\JobBooth\obj\Debug\JobBooth.Form10.resources
+C:\Users\khsci5mca16111\Desktop\JobBooth\obj\Debug\JobBooth.Form11.resources
