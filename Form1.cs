@@ -123,9 +123,9 @@ namespace JobBooth
 
         private void aBOUTUSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /* Form12 f12 = new Form12();
+             AboutUs f12 = new AboutUs();
              f12.Show();
-             this.Hide();*/
+             this.Hide();
         }
     }
 

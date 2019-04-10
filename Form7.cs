@@ -50,7 +50,8 @@ namespace JobBooth
 
                 try
                 {
-                    string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
+                
+                string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
                     MySqlConnection conn1 = new MySqlConnection(connectionString); conn1.Open();
                     string Query = "select * from jpersonaldetails d,jeducational e,expdet f where d.jid=e.jid and d.jid=f.jid ;";
 
@@ -75,7 +76,53 @@ namespace JobBooth
         private void Form7_Load(object sender, EventArgs e)
         {
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-         database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;";
+        database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;";
+
+            try
+            {
+
+                string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
+                MySqlConnection conn2 = new MySqlConnection(connectionString);
+                conn2.Open();
+
+                MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM jpersonaldetails", conn2);
+                
+
+                cmd.ExecuteNonQuery();
+                int n = Convert.ToInt32(cmd.ExecuteNonQuery());
+                int mysqlint = int.Parse(cmd.ExecuteScalar().ToString());
+                string myString = mysqlint.ToString();
+                label2.Text = myString;
+
+
+                MySqlCommand cmd1 = new MySqlCommand("SELECT COUNT(*) FROM cdetails", conn2);
+                
+
+                cmd1.ExecuteNonQuery();
+                int n1 = Convert.ToInt32(cmd1.ExecuteNonQuery());
+                int mysqlint1 = int.Parse(cmd1.ExecuteScalar().ToString());
+                string myString1 = mysqlint1.ToString();
+                label4.Text = myString1;
+
+
+                MySqlCommand cmd2 = new MySqlCommand("SELECT COUNT(*) FROM vdetails", conn2);
+                
+
+                cmd2.ExecuteNonQuery();
+                int n2 = Convert.ToInt32(cmd2.ExecuteNonQuery());
+                int mysqlint2 = int.Parse(cmd2.ExecuteScalar().ToString());
+                string myString2 = mysqlint2.ToString();
+                label6.Text = myString2;
+
+
+            }
+
+            catch (Exception cc)
+            {
+                MessageBox.Show(cc.ToString());
+            }
+
+
 
         }
 

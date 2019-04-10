@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.jOBSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBOUTUSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,24 +54,14 @@
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.jOBSToolStripMenuItem,
             this.aBOUTUSToolStripMenuItem,
             this.lOGINToolStripMenuItem,
             this.sIGNUPToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(1437, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(359, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(293, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // jOBSToolStripMenuItem
-            // 
-            this.jOBSToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.jOBSToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jOBSToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.jOBSToolStripMenuItem.Name = "jOBSToolStripMenuItem";
-            this.jOBSToolStripMenuItem.Size = new System.Drawing.Size(66, 22);
-            this.jOBSToolStripMenuItem.Text = "JOBS";
             // 
             // aBOUTUSToolStripMenuItem
             // 
@@ -212,7 +201,6 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem jOBSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBOUTUSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lOGINToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;

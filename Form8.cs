@@ -130,10 +130,11 @@ namespace JobBooth
                 string Query5 = "select qual from vdetails where vid='" + vid + "';";
                 MySqlCommand cmd2 = new MySqlCommand(Query5, conn1);
                 string l = Convert.ToString(cmd2.ExecuteScalar());
-                MessageBox.Show(l);
+                //MessageBox.Show(l);
 
-               
-                string Query6 = "select firstname,middlename,lastname,address,dob,gender,phone,email,hobbies,exp,Xschool,Xpassout,Xpercent,XIIschool,XIIpassout,XIIpercent,ugcollege,ugpassout,ugpercent,ugmajor,pgcollege,pgpassout,pgpercent,pgmajor from jpersonaldetails d,jeducational e,expdet f where d.jid=e.jid and d.jid=f.jid and ugmajor like '%" + l + '%' + "';";
+
+                string Query6 = "select firstname,middlename,lastname,address,dob,gender,phone,email,hobbies,exp,Xschool,Xpassout,Xpercent,XIIschool,XIIpassout,XIIpercent,ugcollege,ugpassout,ugpercent,ugmajor,pgcollege,pgpassout,pgpercent,pgmajor,jtitle,ocname,expyear,ryear,psdec from jpersonaldetails d,jeducational e,expdet f where d.jid=e.jid and d.jid=f.jid and ugmajor like '%" + l + '%' + "';";
+                //string Query6 = "select firstname,middlename,lastname,address,dob,gender,phone,email,hobbies,exp,Xschool,Xpassout,Xpercent,XIIschool,XIIpassout,XIIpercent,ugcollege,ugpassout,ugpercent,ugmajor,pgcollege,pgpassout,pgpercent,pgmajor,jtitle,ocname,expyear,ryear,psdec from jpersonaldetails d,jeducational e,expdet f where d.jid=e.jid and d.jid=f.jid or ugmajor like '%" + l + '%' + "' or pgmajor like '%" + l + '%' + "';";
                 MySqlCommand cmd3 = new MySqlCommand(Query6, conn1);
                 MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
                 MyAdapter.SelectCommand = cmd3;
