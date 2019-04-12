@@ -159,13 +159,14 @@ namespace JobBooth
                 string psdec = textBox25.Text;
 
                
-
+                    
                 string jid = string.Concat("JD", i);
                 String insert = "insert into jpersonaldetails(jid,firstname,middlename,lastname,password,address,dob,gender,phone,email,lang,hobbies,exp)values('" + jid + "','" + fname + "' ,'" + mname + "','" + lname + "','" + password1 + "','" + add + "','" + dob + "','" + gender +"','"+ phone + "','" + email + "','" + lang + "','" + hob + "','" + exper + "')";
 
                 MySqlCommand cc1 = new MySqlCommand(insert,conn1);
                 cc1.ExecuteNonQuery();
 
+                
 
                 String insert1 = "insert into jeducational(Xschool,Xpassout,Xpercent,XIIschool,XIIpassout,XIIpercent,ugcollege,ugpassout,ugpercent,ugmajor,pgcollege,pgpassout,pgpercent,pgmajor,jid)values('" + xschool + "','" + Xpassout + "' ,'" + Xpercent + "','" + XIIschool + "','" + XIIpassout + "','" + XIIpercent + "','" + ugcollege + "','" + ugpassout + "','" + ugpercent + "','" + ugmajor + "','" + pgcollege + "','" + pgpassout + "','" + pgpercent + "','" + pgmajor + "','" + jid+ "')";
                 MySqlCommand cc2 = new MySqlCommand(insert1, conn1);

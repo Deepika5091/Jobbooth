@@ -105,6 +105,9 @@ namespace JobBooth
 
         private void button3_Click(object sender, EventArgs e)
         {
+            email e1 = new email();
+            e1.Show();
+            this.Hide();
 
         }
 
@@ -148,6 +151,25 @@ namespace JobBooth
             {
                 MessageBox.Show(cc.ToString());
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form12 f12 = new Form12();
+            f12.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("SUCCESSFULLY LOGGED OUT");
+            this.Close();
+            this.Close();
+
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
         }
     }
 }

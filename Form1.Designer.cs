@@ -179,7 +179,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1797, 721);
+            this.ClientSize = new System.Drawing.Size(1794, 746);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

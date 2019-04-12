@@ -90,5 +90,32 @@ namespace JobBooth
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            email e1 = new email();
+            e1.Show();
+            this.Show();
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form13 f13 = new Form13();
+            f13.Show();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("SUCCESSFULLY LOGGED OUT");
+            this.Close();
+            this.Close();
+
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
+        }
     }
 }
