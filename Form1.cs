@@ -12,18 +12,18 @@ namespace JobBooth
 {
     public partial class Form1 : Form
     {
-        // public static string SetValueForText1 { get; internal set; }
+        public static string SetValueForText1 { get; internal set; }
         // public static string SetValueForText2 { get; internal set; }
 
         public Form1()
         {
             InitializeComponent();
         }
-        /* private int imageNumber = 1;
+         private int imageNumber = 1;
 
          private void LoadNextImage()
          {
-             if(imageNumber == 10)
+             if(imageNumber == 6)
              {
                  imageNumber = 1;
 
@@ -32,7 +32,7 @@ namespace JobBooth
              pictureBox1.ImageLocation = string.Format(@"images\{0}.jpg", imageNumber);
              imageNumber++;
 
-         }*/
+         }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -54,6 +54,9 @@ namespace JobBooth
             //label1.BackColor = System.Drawing.Color.Transparent;
             //label2.BackColor = System.Drawing.Color.Transparent;
             //label3.BackColor = System.Drawing.Color.Transparent;
+
+            //this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
@@ -113,7 +116,7 @@ namespace JobBooth
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // LoadNextImage();
+            LoadNextImage();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -126,6 +129,11 @@ namespace JobBooth
              AboutUs f12 = new AboutUs();
              f12.Show();
              this.Hide();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 

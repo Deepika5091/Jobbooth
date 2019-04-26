@@ -24,68 +24,58 @@ namespace JobBooth
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*  try
+            try
+            {
 
-              {
+                MailMessage msg = new MailMessage();
+                
+                msg.From = new MailAddress("jobbooth2019@gmail.com");
+                msg.To.Add(textBox4.Text);
+                msg.Subject = textBox3.Text;
+                msg.Body = textBox2.Text;
 
-                  button1.Enabled = false;
+                SmtpClient smt = new SmtpClient();
+                smt.Host = "smtp.gmail.com";
+                System.Net.NetworkCredential ntcd = new NetworkCredential();
+                ntcd.UserName = "jobbooth2019@gmail.com";
+                ntcd.Password = "majorproject";
+                smt.Credentials = ntcd;
+                smt.EnableSsl = true;
+                smt.Port = 587;
+                smt.Send(msg);
 
-                  //btnCancel.Visible = true;
+                MessageBox.Show("Your Mail is sent successfully");
+                textBox4.Text = " ";
+                textBox3.Text = " ";
+                textBox2.Text = " ";
 
-                  message = new MailMessage();
+            }
+            catch (Exception ex)
+            {
 
-
-
-                  if (IsValidEmail(textBox2.Text))
-
-                  {
-
-                      message.To.Add(textBox2.Text);
-
-                  }
-
-
-
-                  string femail = textBox1.Text;
-
-                  message.Subject = textBox4.Text;
-
-                  message.From = new MailAddress(femail);
-
-                  message.Body = textBox3.Text;
-
-
-
+                MessageBox.Show(ex.Message);
+            }
 
 
-                  // set smtp details
+        }
 
-                  smtp = new SmtpClient("smtp.gmail.com");
+        private void label1_Click(object sender, EventArgs e)
+        {
+                    }
 
-                  smtp.Port = 465;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
+        }
 
-                  smtp.EnableSsl = true;
-
-                  smtp.Credentials = new NetworkCredential("menondeepika1@gmail.com", "");
-
-                  smtp.SendAsync(message, message.Subject);
-
-                  smtp.SendCompleted += new SendCompletedEventHandler(smtp_SendCompleted);
-
-              }
-
-              catch (Exception ex)
-
-              {
-
-                  MessageBox.Show(ex.Message);
-
-                  btnCancel.Visible = false;
-
-                  btnSend.Enabled = true;
-
-              }
-          }*/
+        private void email_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
+        
+    
+

@@ -48,5 +48,10 @@ namespace JobBooth
         {
 
         }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace JobBooth
     public partial class Form3 : Form
     {
         public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
 
         private string connectionString;
         private string password;
@@ -76,7 +77,7 @@ namespace JobBooth
             if (dt.Rows.Count > 0)
             {
                 SetValueForText1 = textBox1.Text;
-                // SetValueForText2 = textBox2.Text;
+                SetValueForText2 = textBox2.Text;
 
                 Form8 frm8 = new Form8();
                 frm8.Show();
@@ -94,6 +95,7 @@ namespace JobBooth
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
        database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;";
         }

@@ -44,6 +44,7 @@ namespace JobBooth
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
           database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;";
 

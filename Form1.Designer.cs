@@ -53,22 +53,25 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aBOUTUSToolStripMenuItem,
             this.lOGINToolStripMenuItem,
             this.sIGNUPToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(1437, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(1446, -1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(293, 26);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(603, 39);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // aBOUTUSToolStripMenuItem
             // 
             this.aBOUTUSToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aBOUTUSToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.aBOUTUSToolStripMenuItem.Name = "aBOUTUSToolStripMenuItem";
-            this.aBOUTUSToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.aBOUTUSToolStripMenuItem.Size = new System.Drawing.Size(161, 33);
             this.aBOUTUSToolStripMenuItem.Text = "ABOUT US";
             this.aBOUTUSToolStripMenuItem.Click += new System.EventHandler(this.aBOUTUSToolStripMenuItem_Click);
             // 
@@ -81,14 +84,14 @@
             this.lOGINToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lOGINToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.lOGINToolStripMenuItem.Name = "lOGINToolStripMenuItem";
-            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(78, 22);
+            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(112, 33);
             this.lOGINToolStripMenuItem.Text = "LOGIN";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
@@ -96,7 +99,7 @@
             // 
             this.jobseekerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.jobseekerToolStripMenuItem.Name = "jobseekerToolStripMenuItem";
-            this.jobseekerToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.jobseekerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.jobseekerToolStripMenuItem.Text = "Jobseeker";
             this.jobseekerToolStripMenuItem.Click += new System.EventHandler(this.jobseekerToolStripMenuItem_Click);
             // 
@@ -104,7 +107,7 @@
             // 
             this.organizationToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.organizationToolStripMenuItem.Name = "organizationToolStripMenuItem";
-            this.organizationToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.organizationToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.organizationToolStripMenuItem.Text = "Organization";
             this.organizationToolStripMenuItem.Click += new System.EventHandler(this.organizationToolStripMenuItem_Click);
             // 
@@ -112,7 +115,7 @@
             // 
             this.sIGNUPToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sIGNUPToolStripMenuItem.Name = "sIGNUPToolStripMenuItem";
-            this.sIGNUPToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            this.sIGNUPToolStripMenuItem.Size = new System.Drawing.Size(139, 33);
             this.sIGNUPToolStripMenuItem.Text = "SIGN UP";
             this.sIGNUPToolStripMenuItem.Click += new System.EventHandler(this.sIGNUPToolStripMenuItem_Click);
             // 
@@ -120,9 +123,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 201);
+            this.label1.Location = new System.Drawing.Point(39, 309);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 27);
+            this.label1.Size = new System.Drawing.Size(247, 40);
             this.label1.TabIndex = 9;
             this.label1.Text = "THE JOB FINDER";
             // 
@@ -130,9 +134,10 @@
             // 
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(12, 231);
+            this.panel2.Location = new System.Drawing.Point(4, 369);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1766, 489);
+            this.panel2.Size = new System.Drawing.Size(2663, 738);
             this.panel2.TabIndex = 11;
             // 
             // pictureBox1
@@ -141,50 +146,54 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1766, 489);
+            this.pictureBox1.Size = new System.Drawing.Size(2663, 738);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(1781, 26);
+            this.vScrollBar1.Location = new System.Drawing.Point(2672, 40);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(15, 694);
+            this.vScrollBar1.Size = new System.Drawing.Size(15, 1068);
             this.vScrollBar1.TabIndex = 12;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-45, -69);
+            this.pictureBox2.Location = new System.Drawing.Point(-68, -106);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(284, 289);
+            this.pictureBox2.Size = new System.Drawing.Size(426, 445);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(3, 13);
+            this.panel1.Location = new System.Drawing.Point(4, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(496, 185);
+            this.panel1.Size = new System.Drawing.Size(744, 285);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1794, 746);
+            this.ClientSize = new System.Drawing.Size(1291, 654);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -27,19 +27,30 @@ namespace JobBooth
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form8 f8 = new Form8();
-            f8.Show();
-            this.Hide();
+           
         }
 
         private void Form10_Load(object sender, EventArgs e)
         {
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
           database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;";
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form8 f8 = new Form8();
+            f8.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -78,7 +89,7 @@ namespace JobBooth
                 cc.ExecuteNonQuery();
 
                 MessageBox.Show("Vacancy Added");
-            
+
             }
             catch (Exception cc)
             {

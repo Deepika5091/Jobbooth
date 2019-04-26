@@ -37,5 +37,10 @@ namespace JobBooth
             f1.Show();
             this.Hide();
         }
+
+        private void Form11_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

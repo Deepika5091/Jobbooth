@@ -26,7 +26,7 @@ namespace JobBooth
 
         private void Form8_Load(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Maximized;
             string connectionString = "datasource=localhost;port=3306;username=root;password=;database=jobbooth;Convert Zero Datetime=True;Allow Zero Datetime=True;";
             MySqlConnection conn1 = new MySqlConnection(connectionString);
             conn1.Open();

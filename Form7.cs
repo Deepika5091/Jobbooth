@@ -96,6 +96,7 @@ namespace JobBooth
 
         private void Form7_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
         database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;";
 
@@ -113,7 +114,7 @@ namespace JobBooth
                 int n = Convert.ToInt32(cmd.ExecuteNonQuery());
                 int mysqlint = int.Parse(cmd.ExecuteScalar().ToString());
                 string myString = mysqlint.ToString();
-                label2.Text = myString;
+                label9.Text = myString;
 
 
                 MySqlCommand cmd1 = new MySqlCommand("SELECT COUNT(*) FROM cdetails", conn2);
@@ -123,7 +124,7 @@ namespace JobBooth
                 int n1 = Convert.ToInt32(cmd1.ExecuteNonQuery());
                 int mysqlint1 = int.Parse(cmd1.ExecuteScalar().ToString());
                 string myString1 = mysqlint1.ToString();
-                label4.Text = myString1;
+                label8.Text = myString1;
 
 
                 MySqlCommand cmd2 = new MySqlCommand("SELECT COUNT(*) FROM vdetails", conn2);
@@ -133,7 +134,7 @@ namespace JobBooth
                 int n2 = Convert.ToInt32(cmd2.ExecuteNonQuery());
                 int mysqlint2 = int.Parse(cmd2.ExecuteScalar().ToString());
                 string myString2 = mysqlint2.ToString();
-                label6.Text = myString2;
+                label7.Text = myString2;
 
 
             }
@@ -185,6 +186,11 @@ namespace JobBooth
             Form1 f1 = new Form1();
             f1.Show();
             this.Hide();
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
 
         }
     }

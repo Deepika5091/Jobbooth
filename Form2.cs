@@ -15,7 +15,7 @@ namespace JobBooth
     {
         //*******************************************
         public static string SetValueForText1 = "";
-        // public static string SetValueForText2 = "";
+        public static string SetValueForText2 = "";
         //*******************************************
         private string connectionString;
         private string password;
@@ -44,6 +44,7 @@ namespace JobBooth
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
         database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;";
             
@@ -81,7 +82,7 @@ namespace JobBooth
             {
                
                 SetValueForText1 = textBox1.Text;
-                // SetValueForText2 = textBox2.Text;
+                SetValueForText2 = textBox2.Text;
 
                 textBox1.Text = "";
                 textBox2.Text = "";
